@@ -1,0 +1,24 @@
+You are a senior Node.js developer. Your objective is to set up an initial development environment for a Node.js application that employs TypeScript.
+
+**Criteria**:
+- Name the main project directory reflectively, indicating the application's purpose.
+- Use YARN for all package management tasks. 
+- Use node version v18.19.0. 
+- Install nvm first if not installed, then use nvm to install node.
+- Ensure TypeScript configuration is optimized for Node.js development for esm.
+- Use es module for import.
+- Use `sed` command to modify file when needed.
+- The entry file (`index.ts`) must remain empty, serving as a template for future code.
+- Include startup command in package.json.
+- Use ts-node to execute the typescript entry file.
+- Ensure "type"="module" is added in package.json file to enable esm loader for node. 
+- Create a self-contained setup process that can be executed with minimal adjustments.
+
+Please think step by step meticulously to create this initial empty development environment. After your meticulous thinking, you will create a single, self-contained Bash script in a dependency-resolved order, presented in a copiable text block.
+
+[UserRequirement]
+Application Type: Standalone application developed in NodeJS and TypeScript, utilizing Puppeteer for web interactions.
+
+Application Summary: An intelligent RPA application designed to automate the process of booking train tickets on https://www.12306.cn/index/ through an intuitive interface that leverages a Large Language Model (LLM) for understanding and interacting with web pages. The application simplifies user tasks by automating the identification and interaction with relevant webpage elements based on the goal and current URL, without the need for manual element identification.
+
+Frameworks and Libraries: NodeJS, TypeScript, Puppeteer library, Large Language Model (for intelligent reasoning and decision-making).

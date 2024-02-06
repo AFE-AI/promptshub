@@ -1,0 +1,67 @@
+**Software Application Knowledge Book (Book-Like Structure)**
+
+1. **Application Summary**
+   - { summary  of the Application, which captures the essense of the application }
+
+2. **Technology Specifications (Framework and Libraries)**
+   - Application Type: {here is the application type}
+   - Frameworks and Libraries, including versions and configurations
+
+3. **Architecture** 
+   - List of Major Modules (Chapters). 
+   - Brief Description of Each Module
+   - How the modules interact with each other
+
+4. **Global Configuration**
+   - Here we put some global configurations{not sure what to put here now}
+
+5. **Design Pattern**
+   - Here we describe some design patterns we use. For example, to access the database, we have used some design patterns, so when we are developing certain module, this kinda global information can be sent as context information. This will drive the overall design.
+   - { repository pattern } Please refer to the 
+
+6. **Modules (Chapters)**
+   - Each module represents a chapter in the book.
+   - **Table of Contents (Modules Overview)**
+     - List of Major Modules (Chapters)
+     - Brief Description of Each Module
+   - Contents of each Module (Chapter):
+     1. **Module Requirements (Chapter Introduction)**
+        - Detailed Requirements of the Module
+        - Overview of Module's Purpose and Functionalities
+     2. **Public API Section (External Interface)**
+        - Description of Public APIs
+        - Integration Guidelines
+     3. **Detailed Design (Comprehensive Overview)**
+        - Description of Internal APIs
+        - In-depth Coverage of Public APIs
+        - Internal Structure and File Organization
+     4. **Implementation Details (Implementation Specifics)**
+        - Code Implementations
+     5. **Subtasks (Implementation Breakdown)**
+        - Specific Implementation Tasks
+        - Reference to File Path for Each Task
+     6. **Unit Testing (Quality Assurance)**
+        - Test Cases Specific to the Module
+        - Documentation of Testing Procedures
+        - File Path for Each Test Case
+     7. **Integration Testing (Inter-Module Testing)**
+        - Testing Procedures for Module Interactions
+        - File Paths for Integration Test Scripts
+
+7. **Non-Modular Components**
+   - here we put the non-module component, what they are, what are their usage. Because in one application, we not only have 
+   - **main.py (Entry File)**: Introduction to the application's entry point, outlining its role in initializing modules, orchestrating the flow between configuration reading, website navigation, and notification handling.
+
+8. **System Testing (Application-Level Testing)**
+   - Testing Procedures for the Entire Application
+   - Test Cases for End-to-End Functionality
+   - Documentation of System Testing Processes
+   - File Paths for System Test Scripts
+
+9. **Deployment (Application Launch)**
+   - Deployment Strategies and Best Practices
+   - Environment Setup and Configuration
+   - Version Control and Release Management
+
+10. **Data Management and Storage**
+    - Discusses how `config.json` is utilized for dynamic configuration management and details the structure for maintaining logs in the "logs" folder.

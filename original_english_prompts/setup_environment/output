@@ -1,0 +1,61 @@
+#!/bin/bash
+
+# Define project directory name reflecting application's purpose
+PROJECT_DIR="train-ticket-booking-rpa"
+
+# Create the project directory
+mkdir $PROJECT_DIR
+cd $PROJECT_DIR
+
+# Check if nvm is installed, install it if not
+if ! command -v nvm &> /dev/null
+then
+    echo "NVM not found. Installing..."
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+    export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+fi
+
+# Install the specific Node.js version using nvm
+nvm install 18.19.0
+nvm use 18.19.0
+
+# Initialize the project with Yarn and add TypeScript, ts-node, and Puppeteer
+yarn init -y
+yarn add typescript ts-node puppeteer @types/node @types/puppeteer
+yarn add --dev @types/node @types/puppeteer
+
+# Create a tsconfig.json file optimized for Node.js with ESM
+cat <<EOT > tsconfig.json
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
+EOT
+
+# Use sed to set "type"="module" in package.json for ESM support
+sed -i'.bak' 's/"private": true/"private": true, "type": "module"/' package.json
+
+# Create an empty entry file
+mkdir src
+touch src/index.ts
+
+# Add start script in package.json for running the app
+sed -i'.bak' '/"scripts": {/a \
+\  "start": "ts-node src/index.ts" \
+' package.json
+
+# Cleanup backup files created by sed
+rm package.json.bak
+
+echo "Project setup is complete."

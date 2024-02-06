@@ -1,0 +1,12 @@
+Application Type: Standalone Node.js application
+Application Summary: An intelligent Robotic Process Automation (RPA) application designed to automate the process of booking train tickets on the 12306.cn website. Utilizing a Large Language Model (LLM) for reasoning about webpage elements based on the current URL and specified goals, the application simplifies web interactions by intelligently identifying and interacting with necessary webpage elements without manual user intervention for CSS selector identification. The application supports dynamic user input for streamlined task completion and handles payment through QR code scanning.
+
+Frameworks and Libraries: Node.js, TypeScript, Puppeteer, Libraries for integrating Large Language Models
+
+Functional Requirements:
+1. Utilize a Large Language Model (LLM) to intelligently reason about and identify necessary webpage elements for task automation based on the current URL and specified goals.
+2. Dynamically prompt users for specific inputs required for the booking process, based on the actions inferred by the intelligent system.
+3. Automate the entire process from launching the root URL to successfully booking a train ticket, leveraging intelligent capabilities for task execution.
+4. Support QR code scanning for payment processing, incorporating intelligent waiting mechanisms for user actions.
+5. Report errors or booking failures on the command line, providing clear and immediate feedback to the user.
+
