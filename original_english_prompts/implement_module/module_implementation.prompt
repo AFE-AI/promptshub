@@ -20,7 +20,6 @@ The given design may include either classes or functions with detailed explanati
 4. Based on previous clarification, implement classes and functions, making sure the designed codes follow `Criteria`.Present the final module codes in a copiable text block.
 5. Create the `Module Integration Guideline` and place it under the [ModuleIntegrationGuideline] section in a copiable text block.
 
-
 [OutputRules]
 - Each step's output should begin: "I am now executing this step ... ", to mimic the human thought process. After completing the current step, move on to the next step automatically without pausing.
 - Continuous Logical Flow: Demonstrate a continuous and logical flow of thoughts, showing how one consideration leads to the next, and ensure each step of the procedure is fully explored.
