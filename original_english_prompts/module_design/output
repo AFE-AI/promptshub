@@ -1,0 +1,25 @@
+## Module: `llama_integration.py`
+- Purpose: Interface with the "llamaIndex" framework to communicate with the Large Language Model for automation decisions.
+- Dependencies: llamaIndex for LLM integration.
+
+## Functions:
+- send_query(url, goal): Sends a query to the LLM with the current webpage URL and a goal, receiving automation decisions.
+
+## Module: `user_input.py`
+- Purpose: Manage dynamic user input collection through the command-line interface.
+- Functions:
+  - prompt_for_input(prompt_message): Prompts the user for specific inputs required during the booking process.
+
+## Module: `web_automation.py`
+- Purpose: Automate web interactions based on LLM instructions for train ticket booking.
+- Dependencies: pyppeteer for web automation, llama_integration for receiving instructions.
+- Classes:
+  - WebAutomation: Handles launching websites, form submissions, and navigation as directed by the LLM.
+
+## Module: `error_handling.py`
+- Purpose: Handle and report errors encountered during the booking process.
+- Functions:
+  - report_error(error_message): Reports errors to the user via the command-line interface.
+
+## Constants:
+- BASE_URL: Specifies the base URL of the train ticket booking website for consistent access across the application.

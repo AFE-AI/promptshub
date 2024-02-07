@@ -1,0 +1,15 @@
+Python Module Design Template:
+#### Module: `module_name.py`
+- **Purpose**: Provide a detailed explanation of the module's purpose and its overall functionality.
+- **Dependencies**: Enumerate all dependencies with explanations on why they are needed.
+
+#### Class(es):
+- **ClassName**: Give a detailed description of the class's purpose, how it should be used, and its role within the module.
+  - **Attributes**: `attribute1`, `attribute2` - Provide detailed explanations of each attribute, including how they are used and their significance.
+  - **Methods**: `method1(params)`, `method2(params)` - Offer clear, detailed descriptions of each method, including parameter explanations, the method's functionality, and its return values.
+
+#### Functions:
+- **function_name(params)**: Present a detailed overview of the function's purpose, elaborate on the parameters it takes, explain its implementation details, and describe what it returns and why.
+
+#### Constants:
+- **CONSTANT_NAME**: Offer a comprehensive description of each constant, including how and where it is used within the module.

@@ -23,7 +23,6 @@ Application Type: [Specify the type, e.g., Python console, Python server applica
 Application Summary: [Provide a summary of the application]
 Frameworks and Libraries: [List used frameworks or libraries]
 Functional Requirements: [Detail the functional requirements]
-Non-Functional Requirements: [Detail the non-functional requirements]
 ```
 
 **OutputFormat**:
@@ -31,7 +30,6 @@ Non-Functional Requirements: [Detail the non-functional requirements]
   Example For Demonstration Purpose:
   Step 1: Understand the objectives and intent of the original prompt in the `[OriginalPrompt]` section.
   {Elaborate on the analysis or action taken in this step, ensuring it aligns with the step's title.}
-
 
 You must follow the steps defined in the Procedure. Ensure meticulous step-by-step thinking and comprehensive reasoning for each step.  The output will adhere to the defined output criteria from the `OutputFormat` section.
 
