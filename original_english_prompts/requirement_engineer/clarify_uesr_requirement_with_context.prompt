@@ -19,10 +19,12 @@ Document the final clarified requirements in a structured, unambiguous format as
 
 **Requirement Documentation Format**:
 ```
+$RequirementDocStart$
 Application Type: [Specify the type, e.g., Python console, Python server application, Node.js server, etc.]
 Application Summary: [Provide a summary of the application]
 Frameworks and Libraries: [List used frameworks or libraries]
 Functional Requirements: [Detail the functional requirements]
+$RequirementDocEnd$
 ```
 
 **OutputFormat**:
@@ -34,4 +36,4 @@ Functional Requirements: [Detail the functional requirements]
 You must follow the steps defined in the Procedure. Ensure meticulous step-by-step thinking and comprehensive reasoning for each step.  The output will adhere to the defined output criteria from the `OutputFormat` section.
 
 [UserRequirement]
-####  RPA to Book Train Tickets on https://www.12306.cn/index/
+create one RPA to Book Train Tickets on https://www.12306.cn/index/

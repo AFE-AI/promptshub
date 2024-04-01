@@ -1,7 +1,7 @@
 1. I actually want to build an intelligent Robotic Process Automation (RPA) application designed to automate web interactions effectively. The application's core functionality involves utilizing a library that employs a Large Language Model (LLM) for reasoning about relevant webpage elements in relation to a specified goal. This process is based on the current URL and the application's objective. This intelligent process simplifies task automation by identifying necessary elements, leveraging the goal and URL inputs to produce outcomes without requiring users to understand the operational intricacies. This also frees human to manually open the developer tools to find out those css elements themselves in a traditional RPA application.
 2. The intelligent system should ask user to provide specific input based on the action it infers as we described in answers of question 1
 3. From launching the root url to finishing the booking of a ticket. Should be intelligent
-4. The paymetn will be qrcode scanning. SInce its intelligent, should wait as you can see in the answer of question 1
+4. The payment will be qrcode scanning. SInce its intelligent, should wait as you can see in the answer of question 1
 5. Its NodeJS, Typescript, standalone application, with pupperteer lib 
 6. Report error on command line when error happened
 7. Forget about performance and security stuff here.

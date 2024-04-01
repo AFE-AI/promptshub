@@ -1,0 +1,59 @@
+
+
+### 模块：`web_interaction.py`
+- **目的**：封装与网页元素的直接交互，如导航、搜索、点击和输入文本。
+- **依赖性**：依赖于Playwright库来实现浏览器自动化。
+
+#### 类：`WebInteractor`
+- **目的**：提供一个接口来与网页进行交互，如点击按钮、输入文本和获取元素的文本。
+  - **属性**：
+    - `browser_context` - Playwright的浏览器上下文，用于管理浏览器会话。
+    - `page` - 当前活动页面的引用。
+  - **方法**：
+    - `navigate(url)` - 导航到指定的URL。
+    - `click(selector)` - 点击给定选择器的元素。
+    - `input_text(selector, text)` - 在给定选择器的元素中输入文本。
+    - `get_text(selector)` - 获取给定选择器的元素的文本内容。
+
+### 模块：`intent_resolution.py`
+- **目的**：基于当前的URL和用户的目标推断应采取的行动。
+- **依赖性**：依赖于llamaindex库。
+
+#### 类：`IntentResolver`
+- **目的**：使用LLM来识别和推断用户的意图，并建议可能的网页操作。
+  - **方法**：
+    - `resolve_intent(url, user_intent)` - 根据当前的URL和用户的目标来推断行动。
+
+### 模块：`user_input.py`
+- **目的**：管理用户输入，确保输入的有效性和相关性。
+- **依赖性**：无特定外部依赖。
+
+#### 函数：
+- `get_user_input(prompt)` - 显示提示信息并获取用户输入。
+- `validate_input(input, criteria)` - 验证用户输入是否符合特定条件。
+
+### 模块：`automation_flow_control.py`
+- **目的**：协调自动化流程的各个步骤，从开始到完成。
+- **依赖性**：依赖于`web_interaction.py`、`intent_resolution.py`和`user_input.py`。
+
+#### 类：`AutomationController`
+- **目的**：控制和管理自动化任务的执行流程。
+  - **方法**：
+    - `start_automation(url)` - 开始自动化流程，从给定的根URL。
+    - `execute_step(step)` - 执行自动化流程的特定步骤。
+    - `complete_automation()` - 完成自动化流程，并返回结果。
+
+### 模块：`payment.py`
+- **目的**：处理与支付相关的交互，特别是通过扫描二维码。
+- **依赖性**：依赖于`web_interaction.py`。
+
+#### 函数：
+- `process_payment(selector)` - 定位和操作支付过程中的二维码。
+
+### 模块：`error_handling.py`
+- **目的**：捕获和报告自动化过程中的错误。
+- **依赖性**：无特定外部依赖。
+
+#### 函数：
+- `log_error(error_message)` - 记录错误信息到日志或控制台。
+
